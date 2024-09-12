@@ -1,0 +1,22 @@
+
+type Query {
+  getMe: User 
+}
+
+type User {
+  id: ID!
+  userName: String
+  fullName: String
+}
+
+type Mutation {
+  login(userName: String, password: String): String
+  register(userName: String, password: String, fullName: String): String
+  updateProfile(userName: String, password: String, fullName: String): String
+  deleteAccount(id: String): String
+}
+
+type Subscription {
+  users: [User]
+}
+

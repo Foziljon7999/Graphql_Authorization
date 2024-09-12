@@ -1,0 +1,22 @@
+
+type Query {
+  hobbies: [Hobby] 
+}
+
+type Hobby {
+  id: ID!
+  name: String
+  user_id: String
+}
+
+
+type Mutation {
+        addHobby(name: String!, user_id: String): Hobby
+        updateHobby(id: ID!, name: String, user_id: String): Hobby
+        deleteHobby(id: String): String
+ }
+
+
+type Subscription {
+  hobbies: [Hobby]
+}
